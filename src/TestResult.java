@@ -21,10 +21,22 @@ public class TestResult {
         Check[c]++;
         c=0;
       }
-      System.out.println("Counts of number of Massive:" );
+      int f=0;
+      System.out.println("Counts of number in Massive:" );
       for(int i = 0; i<20;i++)
       {
         System.out.println("Count of number "+i+" in Arr = " +Check[i]);
+        if(Check[i]>f)f=Check[i];
       }
+      
+      
+      
+      String maxnum="";
+      for (int i =0; i<20; i++)
+      {
+        if(Check[i]==f)
+        maxnum += Integer.toString(i) + ", ";
+      }
+      System.out.println("Numbers, repeated the most: "+maxnum);
     }
 }
